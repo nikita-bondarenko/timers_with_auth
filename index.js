@@ -116,8 +116,7 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(cookieParser());
 app.use("/", auth);
-const port = process.env.PORT || 3001;
 
-server.listen(port, () => {
-  console.log(`  Listening on http://localhost:${port}`);
+server.listen(process.env.APP_PORT, process.env.APP_IP, () => {
+  console.log("Server running at http://%s:%s/", process.env.APP_IP, process.env.APP_PORT);
 });
