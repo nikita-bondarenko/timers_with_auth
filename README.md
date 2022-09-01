@@ -1,12 +1,15 @@
-Клиентский код идентичен части noauth.
-API точно так же работают по AJAX.
+### Project setup
+```
+npm install
+```
+### Compiles and hot-reloads for development
+``` 
+npm run start
+``` 
 
-Шаблон index.njk отличается, его нужно изучить.
+In this application, you can create your own user, start and stop timers. The app uses MongoDb. Timers's menegment is realized through WebSockets.
 
-Регистрация /signup и аутентификция /login работают через «обычную» отпраку формы, см. шаблон.
-
-Важный момент: для того чтобы избежать конфликта между синтаксисом Vue и Nunjucks последние настроены так, что для серверных шаблонов вместо фигурных скобок используются квадратные:
-
+An important point: to prevent conflict between the Vue and Nunjucks syntaxes, the latest sentiment is to use square brackets instead of curly braces for server-side templates:
 ```js
   tags: {
     blockStart: "[%",
